@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/new"><%= new_form %></a>
+    <p>Welcome to <%= title %></p>
+      <ul>
+        <% for(let message of messages) { %>
+          <li>
+            <%= message.user %><br>
+            <%= message.text %><br>
+            <%= message.added %><br>
+          </li>
+          <hr>
+        <% } %>
+      </ul>
+  </body>
+</html>
